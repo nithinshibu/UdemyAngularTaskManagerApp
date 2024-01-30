@@ -4,6 +4,7 @@ import {
   Input,
   OnInit,
   HostListener,
+  HostBinding,
 } from '@angular/core';
 
 @Directive({
@@ -11,6 +12,7 @@ import {
 })
 export class AlertDirective implements OnInit {
   @Input('error') error!: string;
+  @HostBinding('title') title!: string;
   constructor(private elementRef: ElementRef) {}
   ngOnInit(): void {
     this.elementRef.nativeElement.innerHTML = `
@@ -18,6 +20,7 @@ export class AlertDirective implements OnInit {
     <span>${this.error}</span>
     </div>
     `;
+    this.title = 'Please try again';
   }
 
   @HostListener('mouseenter', ['$event'])
