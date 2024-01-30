@@ -12,9 +12,10 @@ import { JwtUnAuthorizedInterceptorService } from './jwt-un-authorized-intercept
 import { JwtModule } from '@auth0/angular-jwt';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { AlertDirective } from './alert.directive';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, TasksComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, TasksComponent, AlertDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
