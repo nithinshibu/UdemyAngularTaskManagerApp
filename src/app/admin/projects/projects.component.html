@@ -88,9 +88,9 @@
         <app-project
           #prj
           [currentProject]="project"
-          [recordIndex]="i"
-          (editClick)="onEditClick($event, i)"
-          (deleteClick)="onDeleteClick($event, i)"
+          [recordIndex]="project.projectID"
+          (editClick)="onEditClick($event, project.projectID)"
+          (deleteClick)="onDeleteClick($event, project.projectID)"
         >
           <app-check-box-printer #selectionBox></app-check-box-printer>
         </app-project>

@@ -125,10 +125,13 @@ export class ProjectsComponent implements OnInit {
     }
   }
 
-  onEditClick(event: any, index: number) {
-    console.log(`edit index = ${index}`);
+  onEditClick(event: any, projectID: number) {
+    console.log(`edit index = ${projectID}`);
     console.log(`edit projects = ${JSON.stringify(this.projects)}`);
     this.editForm.resetForm();
+    var index = this.projects.findIndex(
+      (project) => project.projectID === projectID
+    );
     setTimeout(() => {
       this.editProject.projectID = this.projects[index].projectID;
       this.editProject.projectName = this.projects[index].projectName;
@@ -170,7 +173,10 @@ export class ProjectsComponent implements OnInit {
     }
   }
 
-  onDeleteClick(event: any, index: number) {
+  onDeleteClick(event: any, projectID: number) {
+    var index = this.projects.findIndex(
+      (project) => project.projectID === projectID
+    );
     this.deleteIndex = index;
     this.deleteProject.projectID = this.projects[index].projectID;
     this.deleteProject.projectName = this.projects[index].projectName;
