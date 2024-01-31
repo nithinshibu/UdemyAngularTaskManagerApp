@@ -62,7 +62,7 @@ export class SignUpComponent implements OnInit {
         confirmPassword: [null, [Validators.required]],
         gender: [null, [Validators.required]],
         countryID: [null, [Validators.required]],
-        receiveNewsLetter: [null],
+        receiveNewsLetter: [false],
         skills: this.formBuilder.array([]),
       },
       {
