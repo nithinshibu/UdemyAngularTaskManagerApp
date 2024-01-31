@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { CanActivateGuardService } from './can-activate-guard.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { ProjectDetailsComponent } from './admin/project-details/project-details.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,12 @@ const routes: Routes = [
     component: TasksComponent,
     canActivate: [CanActivateGuardService],
     data: { expectedRole: 'Employee' },
+  },
+  {
+    path: 'projects/view/:projectid',
+    component: ProjectDetailsComponent,
+    canActivate: [CanActivateGuardService],
+    data: { expectedRole: 'Admin' },
   },
 ];
 

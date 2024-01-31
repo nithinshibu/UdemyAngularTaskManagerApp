@@ -15,7 +15,13 @@ import { TasksComponent } from './tasks/tasks.component';
 import { AlertDirective } from './alert.directive';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, TasksComponent, AlertDirective],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignUpComponent,
+    TasksComponent,
+    AlertDirective,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

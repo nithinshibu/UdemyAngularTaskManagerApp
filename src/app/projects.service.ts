@@ -34,7 +34,7 @@ export class ProjectsService {
 
   getProjectByProjectID(ProjectID: number): Observable<Project> {
     return this.httpClient.get<Project>(
-      'api/Projects/searchbyProjectID' + ProjectID,
+      'api/Projects/searchbyProjectID/' + ProjectID,
       { responseType: 'json' }
     );
   }

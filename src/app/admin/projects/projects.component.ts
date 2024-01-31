@@ -83,7 +83,7 @@ export class ProjectsComponent implements OnInit {
       this.searchBy,
       this.searchText
     );
-    console.log(`resultProjects filter = ${JSON.stringify(resultProjects)}`);
+
     var noOfPages = Math.ceil(resultProjects.length / this.pageSize);
 
     this.pages = [];
@@ -126,8 +126,6 @@ export class ProjectsComponent implements OnInit {
   }
 
   onEditClick(event: any, projectID: number) {
-    console.log(`edit index = ${projectID}`);
-    console.log(`edit projects = ${JSON.stringify(this.projects)}`);
     this.editForm.resetForm();
     var index = this.projects.findIndex(
       (project) => project.projectID === projectID
