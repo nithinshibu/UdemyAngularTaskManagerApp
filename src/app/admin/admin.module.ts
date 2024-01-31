@@ -15,6 +15,7 @@ import { FilterPipe } from '../filter.pipe';
 import { PagingPipe } from '../paging.pipe';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { RouterModule } from '@angular/router';
+import { AdminRoutingModule } from './admin-routing/admin-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { RouterModule } from '@angular/router';
     PagingPipe,
     ProjectDetailsComponent,
   ],
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, AdminRoutingModule],
   exports: [
     DashboardComponent,
     AboutComponent,

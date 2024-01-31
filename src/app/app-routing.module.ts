@@ -1,38 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AboutComponent } from './admin/about/about.component';
-import { ProjectsComponent } from './admin/projects/projects.component';
-import { LoginComponent } from './login/login.component';
 import { CanActivateGuardService } from './can-activate-guard.service';
+import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { ProjectDetailsComponent } from './admin/project-details/project-details.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'signup', component: SignUpComponent },
   { path: 'about', component: AboutComponent },
-  {
-    path: 'admin',
-    canActivate: [CanActivateGuardService],
-    data: { expectedRole: 'Admin' },
-    children: [
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
-      },
-      {
-        path: 'projects',
-        component: ProjectsComponent,
-      },
-      {
-        path: 'projects/view/:projectid',
-        component: ProjectDetailsComponent,
-      },
-    ],
-  },
   {
     path: 'employee',
     canActivate: [CanActivateGuardService],
