@@ -12,14 +12,13 @@ import { CustomValidatorsService } from '../custom-validators.service';
 import { SignUpViewModel } from '../sign-up-view-model.model';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
-import { CanComponentDeactivate } from '../can-deactivate-guard.service';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',
 })
-export class SignUpComponent implements OnInit, CanComponentDeactivate {
+export class SignUpComponent implements OnInit {
   signUpForm!: FormGroup;
   genders = ['Male', 'Female'];
   countries: Country[] = [];
