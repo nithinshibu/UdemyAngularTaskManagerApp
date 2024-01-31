@@ -10,33 +10,39 @@ import { TasksComponent } from './tasks/tasks.component';
 import { ProjectDetailsComponent } from './admin/project-details/project-details.component';
 
 const routes: Routes = [
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    canActivate: [CanActivateGuardService],
-    data: { expectedRole: 'Admin' },
-  },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'signup', component: SignUpComponent },
   { path: 'about', component: AboutComponent },
   {
-    path: 'projects',
-    component: ProjectsComponent,
+    path: 'admin',
     canActivate: [CanActivateGuardService],
     data: { expectedRole: 'Admin' },
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      },
+      {
+        path: 'projects',
+        component: ProjectsComponent,
+      },
+      {
+        path: 'projects/view/:projectid',
+        component: ProjectDetailsComponent,
+      },
+    ],
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignUpComponent },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
-    path: 'tasks',
-    component: TasksComponent,
+    path: 'employee',
     canActivate: [CanActivateGuardService],
     data: { expectedRole: 'Employee' },
-  },
-  {
-    path: 'projects/view/:projectid',
-    component: ProjectDetailsComponent,
-    canActivate: [CanActivateGuardService],
-    data: { expectedRole: 'Admin' },
+    children: [
+      {
+        path: 'tasks',
+        component: TasksComponent,
+      },
+    ],
   },
 ];
 

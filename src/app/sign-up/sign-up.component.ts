@@ -87,7 +87,7 @@ export class SignUpComponent implements OnInit {
       var signUpViewModel = this.signUpForm.value as SignUpViewModel;
       this.loginService.Register(signUpViewModel).subscribe({
         next: (response) => {
-          this.router.navigate(['tasks']);
+          this.router.navigate(['/employee', 'tasks']);
         },
         error: (err) => {
           console.log(err);

@@ -11,13 +11,13 @@
   <div class="collapse navbar-collapse" id="mynav">
     <ul class="navbar-nav ms-auto">
       <li class="nav-item" *ngIf="loginService.currentUserName != null">
-        <a routerLink="dashboard" class="nav-link">Dashboard</a>
+        <a [routerLink]="['/admin', 'dashboard']" class="nav-link">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a routerLink="about" class="nav-link">About</a>
+        <a [routerLink]="['/about']" class="nav-link">About</a>
       </li>
       <li class="nav-item" *ngIf="loginService.currentUserName != null">
-        <a routerLink="projects" class="nav-link">Projects</a>
+        <a [routerLink]="['/admin', 'projects']" class="nav-link">Projects</a>
       </li>
       <li class="nav-item" *ngIf="loginService.currentUserName != null">
         <a href="#" class="nav-link">{{ loginService.currentUserName }}</a>
@@ -26,10 +26,10 @@
         <a href="#" class="nav-link" (click)="loginService.Logout()">Logout</a>
       </li>
       <li class="nav-item" *ngIf="loginService.currentUserName == null">
-        <a routerLink="login" class="nav-link">Login</a>
+        <a [routerLink]="['/login']" class="nav-link">Login</a>
       </li>
       <li class="nav-item" *ngIf="loginService.currentUserName == null">
-        <a routerLink="signup" class="nav-link">Sign Up</a>
+        <a [routerLink]="['/signup']" class="nav-link">Sign Up</a>
       </li>
     </ul>
     <form class="d-flex">
