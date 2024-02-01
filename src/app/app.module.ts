@@ -13,17 +13,16 @@ import { JwtUnAuthorizedInterceptorService } from './interceptors/jwt-un-authori
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { EmployeeModule } from './employee/employee.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignUpComponent, AlertDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     AdminModule,
     EmployeeModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: () => {
