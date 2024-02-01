@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CanActivateGuardService } from '../../can-activate-guard.service';
+import { CanActivateGuardService } from '../../guards/can-activate-guard.service';
 import { TasksComponent } from '../components/tasks/tasks.component';
 
 const routes: Routes = [

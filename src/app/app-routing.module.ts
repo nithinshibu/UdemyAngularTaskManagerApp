@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './admin/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { CanDeactivateGuardService } from './can-deactivate-guard.service';
+import { CanDeactivateGuardService } from './guards/can-deactivate-guard.service';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
