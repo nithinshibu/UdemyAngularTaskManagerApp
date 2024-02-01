@@ -14,14 +14,20 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { EmployeeModule } from './employee/employee.module';
 import { SharedModule } from './shared/shared.module';
+import { AboutComponent } from './admin/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, AlertDirective],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignUpComponent,
+    AlertDirective,
+    AboutComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    AdminModule,
     EmployeeModule,
     JwtModule.forRoot({
       config: {

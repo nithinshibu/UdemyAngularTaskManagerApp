@@ -14,6 +14,11 @@ const routes: Routes = [
     canDeactivate: [CanDeactivateGuardService],
   },
   { path: 'about', component: AboutComponent },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
+  },
 ];
 
 @NgModule({

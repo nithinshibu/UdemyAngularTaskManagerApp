@@ -18,7 +18,6 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     DashboardComponent,
-    AboutComponent,
     MyProfileComponent,
     ProjectsComponent,
     ProjectComponent,
@@ -28,7 +27,6 @@ import { SharedModule } from '../shared/shared.module';
   imports: [SharedModule, AdminRoutingModule],
   exports: [
     DashboardComponent,
-    AboutComponent,
     MyProfileComponent,
     ProjectsComponent,
     ProjectDetailsComponent,
