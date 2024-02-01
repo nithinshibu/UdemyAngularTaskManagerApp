@@ -6,14 +6,14 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { ProjectsService } from '../../projects.service';
-import { Project } from '../../project.model';
+import { ProjectsService } from '../../../projects.service';
+import { Project } from '../../../project.model';
 import { DatePipe } from '@angular/common';
-import { ClientLocation } from '../../client-location.model';
-import { ClientLocationService } from '../../client-location.service';
+import { ClientLocation } from '../../../client-location.model';
+import { ClientLocationService } from '../../../client-location.service';
 import { NgForm } from '@angular/forms';
 import { ProjectComponent } from '../project/project.component';
-import { FilterPipe } from '../../filter.pipe';
+import { FilterPipe } from '../../../filter.pipe';
 import { Observable } from 'rxjs';
 
 @Component({
