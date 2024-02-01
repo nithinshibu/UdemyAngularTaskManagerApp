@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Project } from '../project.model';
+import { Project } from '../models/project.model';
 
 @Pipe({
   name: 'paging',

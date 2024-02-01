@@ -7,9 +7,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { CountriesService } from '../../countries.service';
-import { Country } from '../../country.model';
+import { Country } from '../../models/country.model';
 import { CustomValidatorsService } from '../../custom-validators.service';
-import { SignUpViewModel } from '../../sign-up-view-model.model';
+import { SignUpViewModel } from '../../models/sign-up-view-model.model';
 import { LoginService } from '../../login.service';
 import { Router } from '@angular/router';
 

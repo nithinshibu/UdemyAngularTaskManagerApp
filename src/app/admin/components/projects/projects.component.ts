@@ -7,9 +7,9 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { ProjectsService } from '../../../projects.service';
-import { Project } from '../../../project.model';
+import { Project } from '../../../models/project.model';
 import { DatePipe } from '@angular/common';
-import { ClientLocation } from '../../../client-location.model';
+import { ClientLocation } from '../../../models/client-location.model';
 import { ClientLocationService } from '../../../client-location.service';
 import { NgForm } from '@angular/forms';
 import { ProjectComponent } from '../project/project.component';
