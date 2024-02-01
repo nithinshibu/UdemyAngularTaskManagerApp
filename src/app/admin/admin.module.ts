@@ -6,8 +6,8 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 import { DashboardService } from '../dashboard.service';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FormsModule } from '@angular/forms';
-import { TeamSizeValidatorDirective } from '../team-size-validator.directive';
-import { ClientLocationStatusValidatorDirective } from '../client-location-status-validator.directive';
+import { TeamSizeValidatorDirective } from '../directives/team-size-validator.directive';
+import { ClientLocationStatusValidatorDirective } from '../directives/client-location-status-validator.directive';
 import { ProjectComponent } from './components/project/project.component';
 import { CheckBoxPrinterComponent } from './components/check-box-printer/check-box-printer.component';
 import { NumberToWordsPipe } from '../number-to-words.pipe';
