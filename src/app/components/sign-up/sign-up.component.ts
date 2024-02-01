@@ -6,11 +6,11 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { CountriesService } from '../../countries.service';
+import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../models/country.model';
-import { CustomValidatorsService } from '../../custom-validators.service';
+import { CustomValidatorsService } from '../../services/custom-validators.service';
 import { SignUpViewModel } from '../../models/sign-up-view-model.model';
-import { LoginService } from '../../login.service';
+import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
 
 @Component({

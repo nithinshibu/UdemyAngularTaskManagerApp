@@ -6,11 +6,11 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { ProjectsService } from '../../../projects.service';
+import { ProjectsService } from '../../../services/projects.service';
 import { Project } from '../../../models/project.model';
 import { DatePipe } from '@angular/common';
 import { ClientLocation } from '../../../models/client-location.model';
-import { ClientLocationService } from '../../../client-location.service';
+import { ClientLocationService } from '../../../services/client-location.service';
 import { NgForm } from '@angular/forms';
 import { ProjectComponent } from '../project/project.component';
 import { FilterPipe } from '../../../pipes/filter.pipe';

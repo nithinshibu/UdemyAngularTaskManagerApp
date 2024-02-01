@@ -8,7 +8,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Project } from '../../../models/project.model';
-import { ProjectsService } from '../../../projects.service';
+import { ProjectsService } from '../../../services/projects.service';
 import { Subscription } from 'rxjs';
 import { CheckBoxPrinterComponent } from '../check-box-printer/check-box-printer.component';
 
