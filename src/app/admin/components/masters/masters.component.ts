@@ -3,6 +3,7 @@ import {
   ComponentFactoryResolver,
   OnInit,
   QueryList,
+  ViewChild,
   ViewChildren,
 } from '@angular/core';
 import { ComponentLoaderDirective } from '../../../directives/component-loader.directive';
@@ -44,13 +45,10 @@ export class MastersComponent implements OnInit {
   @ViewChildren(ComponentLoaderDirective) componentLoaders:
     | QueryList<ComponentLoaderDirective>
     | any = null;
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
-  ngOnInit(): void {
-    //this.loadDynamicComponent();
-  }
+  constructor() {}
+  ngOnInit(): void {}
 
   menuItemClick(clickedMasterMenuItem: any) {
-    //console.log(clickedMasterMenuItem);
     this.activeItem = clickedMasterMenuItem.itemName;
 
     let matchingTabs = this.tabs.filter((tab: any) => {
@@ -63,16 +61,15 @@ export class MastersComponent implements OnInit {
         displayName: clickedMasterMenuItem.displayName,
       });
       setTimeout(() => {
-        var componentLoadersArray = this.componentLoaders.toArray();
-        console.log(componentLoadersArray);
-        var componentFactory =
-          this.componentFactoryResolver.resolveComponentFactory(
-            clickedMasterMenuItem.component
-          );
-
-        var viewContainterRef =
+        const componentLoadersArray = this.componentLoaders.toArray();
+        const viewContainerRef =
           componentLoadersArray[this.tabs.length - 1].viewContainerRef;
-        viewContainterRef.createComponent(componentFactory);
+
+        // Clear the view container before creating a new component
+        viewContainerRef.clear();
+
+        // Use DynamicChildLoaderDirective directly to create the component
+        viewContainerRef.createComponent(clickedMasterMenuItem.component);
       }, 100);
     }
   }
