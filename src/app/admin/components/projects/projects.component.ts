@@ -13,7 +13,7 @@ import { ClientLocation } from '../../../client-location.model';
 import { ClientLocationService } from '../../../client-location.service';
 import { NgForm } from '@angular/forms';
 import { ProjectComponent } from '../project/project.component';
-import { FilterPipe } from '../../../filter.pipe';
+import { FilterPipe } from '../../../pipes/filter.pipe';
 import { Observable } from 'rxjs';
 
 @Component({

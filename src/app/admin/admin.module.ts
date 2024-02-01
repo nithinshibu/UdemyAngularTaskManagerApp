@@ -10,9 +10,9 @@ import { TeamSizeValidatorDirective } from '../directives/team-size-validator.di
 import { ClientLocationStatusValidatorDirective } from '../directives/client-location-status-validator.directive';
 import { ProjectComponent } from './components/project/project.component';
 import { CheckBoxPrinterComponent } from './components/check-box-printer/check-box-printer.component';
-import { NumberToWordsPipe } from '../number-to-words.pipe';
-import { FilterPipe } from '../filter.pipe';
-import { PagingPipe } from '../paging.pipe';
+import { NumberToWordsPipe } from '../pipes/number-to-words.pipe';
+import { FilterPipe } from '../pipes/filter.pipe';
+import { PagingPipe } from '../pipes/paging.pipe';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin-routing/admin-routing.module';
