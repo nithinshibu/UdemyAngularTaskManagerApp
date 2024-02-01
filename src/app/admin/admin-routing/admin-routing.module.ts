@@ -4,6 +4,7 @@ import { CanActivateGuardService } from '../../guards/can-activate-guard.service
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { ProjectDetailsComponent } from '../components/project-details/project-details.component';
 import { ProjectsComponent } from '../components/projects/projects.component';
+import { MastersComponent } from '../components/masters/masters.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'projects/view/:projectid',
         component: ProjectDetailsComponent,
+      },
+      {
+        path: 'masters',
+        component: MastersComponent,
       },
     ],
   },
