@@ -69,8 +69,24 @@ export class MastersComponent implements OnInit {
         viewContainerRef.clear();
 
         // Use DynamicChildLoaderDirective directly to create the component
-        viewContainerRef.createComponent(clickedMasterMenuItem.component);
+        var componentRef = viewContainerRef.createComponent(
+          clickedMasterMenuItem.component
+        );
+
+        this.tabs[this.tabs.length - 1].viewContainerRef = viewContainerRef;
+
+        if (clickedMasterMenuItem.component.name == '_CountriesComponent') {
+          var componentInstance = componentRef.instance as CountriesComponent;
+          componentInstance.message = 'Hello,Welcome to Countries.';
+        }
       }, 100);
+    }
+  }
+  onCloseClick(clickedTab: any) {
+    clickedTab.viewContainerRef.remove();
+    this.tabs.splice(this.tabs.indexOf(clickedTab), 1);
+    if (this.tabs.length > 0) {
+      this.activeItem = this.tabs[0].itemName;
     }
   }
 }

@@ -23,8 +23,10 @@
           [href]="'#' + tab.itemName"
           [ngClass]="{ active: activeItem == tab.itemName }"
           (click)="activeItem = tab.itemName"
-          >{{ tab.displayName }}</a
-        >
+          >{{ tab.displayName }}
+
+          <span class="fa fa-window-close" (click)="onCloseClick(tab)"></span>
+        </a>
       </li>
     </ul>
     <div class="tab-content">
