@@ -77,7 +77,7 @@ export class MastersComponent implements OnInit {
 
         if (clickedMasterMenuItem.component.name == '_CountriesComponent') {
           var componentInstance = componentRef.instance as CountriesComponent;
-          componentInstance.message = 'Hello,Welcome to Countries.';
+          //componentInstance.message = 'Hello,Welcome to Countries.';
         }
       }, 100);
     }
