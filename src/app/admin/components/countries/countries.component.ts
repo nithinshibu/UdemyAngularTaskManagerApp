@@ -42,6 +42,10 @@ export class CountriesComponent implements OnInit {
   @ViewChild('newFormCancel') newFormCancel!: ElementRef;
   @ViewChild('editFormCancel') editFormCancel!: ElementRef;
 
+  //* Sorting
+  sortBy: string = 'countryName';
+  sortOrder: string = 'ASC'; //ASC and DESC
+
   constructor(
     private countriesService: CountriesService,
     private formBuilder: FormBuilder

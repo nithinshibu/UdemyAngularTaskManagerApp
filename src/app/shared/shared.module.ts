@@ -8,6 +8,7 @@ import { PagingPipe } from '../pipes/paging.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentLoaderDirective } from '../directives/component-loader.directive';
+import { SortPipe } from '../pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ComponentLoaderDirective } from '../directives/component-loader.directi
     FilterPipe,
     PagingPipe,
     ComponentLoaderDirective,
+    SortPipe,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   exports: [
@@ -30,6 +32,7 @@ import { ComponentLoaderDirective } from '../directives/component-loader.directi
     FilterPipe,
     PagingPipe,
     ComponentLoaderDirective,
+    SortPipe,
   ],
 })
 export class SharedModule {}
