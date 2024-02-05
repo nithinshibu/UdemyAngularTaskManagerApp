@@ -17,7 +17,11 @@ export class LoginComponent implements OnInit {
   onLoginClick(event: any) {
     this.loginService.Login(this.loginViewModel).subscribe({
       next: (response) => {
-        this.router.navigate(['/admin', 'dashboard']);
+        if (this.loginService.currentUserRole == 'Admin') {
+          this.router.navigate(['/admin', 'dashboard']);
+        } else {
+          this.router.navigate(['/employee', 'tasks']);
+        }
       },
       error: (err) => {
         console.log(err);

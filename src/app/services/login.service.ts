@@ -17,6 +17,7 @@ export class LoginService {
   ) {}
 
   currentUserName: any = null;
+  currentUserRole: any = null;
   xsrfReqToken: any = null;
 
   public Login(loginViewModel: LoginViewModel): Observable<any> {
@@ -31,6 +32,7 @@ export class LoginService {
         map((response) => {
           if (response) {
             this.currentUserName = response.body.userName;
+            this.currentUserRole = response.body.role;
             sessionStorage.setItem(
               'currentuser',
               JSON.stringify(response.body)
@@ -44,6 +46,19 @@ export class LoginService {
         })
       );
   }
+
+  public detectIfAlreadyLoggedIn() {
+    if (this.jwtHelperService.isTokenExpired() == false) {
+      var currentUser = JSON.parse(
+        sessionStorage.getItem('currentuser')
+          ? JSON.parse(sessionStorage.getItem('currentuser') as string).token
+          : null
+      );
+      this.currentUserName = currentUser.userName;
+      this.currentUserRole = currentUser.role;
+    }
+  }
+
   public Register(signupViewModel: SignUpViewModel): Observable<any> {
     this.httpClient = new HttpClient(this.httpBackend);
 
