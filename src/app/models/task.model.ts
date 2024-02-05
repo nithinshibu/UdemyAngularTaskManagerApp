@@ -16,6 +16,9 @@ export class Task {
   createdByUser: any;
   assignedToUser: any;
   taskStatusDetails: any;
+  createdOnString: any;
+  taskPriority: any;
+  lastUpdatedOnString: any;
   constructor() {
     this.taskID = null;
     this.taskName = null;
